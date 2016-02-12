@@ -1,21 +1,25 @@
 # cloudfoundry-service-broker-sample
 cloudfoundry-service-broker-sample is a sample project that implements the service-broker of cloudfoundry.
+
 Service-broker sample provided by cloudfoundry is too simple to understand mechanism of service-broker.
+
 But this project fully implements SaaS service, servcie-broker, consumer.
+
 By running this project you can understand service-broker's mechanism easily.
 
 ## Concept
 cloudfoundry-service-broker-sample is composed of two projects.
 
 - calculator
+
 The application that receives the operation and return operation result. It is service of the SaaS type
 `com.bong.calculator.broker` the contents of the sub- source implementation of the broker.
 
 - consumer
+
 The application is calculator using the calculator api.
 
 ## How to run
-This guide is 
 Under usage guide assumes that you are using to deploy the application to cloudfoundry.
 
 1. Build projects and deploy.
