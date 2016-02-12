@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bong.calculator.model.UserManager;
 
 
+/**
+ * APIKeyController.java - Controller for request about APIkey.  
+ * @author kimbongchan
+ *
+ */
 @RestController
 @RequestMapping("/key")
 public class APIKeyController {
@@ -25,7 +30,12 @@ public class APIKeyController {
 	private static final String KEY_API = "apikey";
 	private static final String KEY_ID = "id";
 	private static final String KEY_PASSWORD = "password";
-
+	
+	/**
+	 * Create APIKEY using id, pw.
+	 * @param data id, pw
+	 * @return success or fail flag
+	 */
 	@RequestMapping(method = RequestMethod.POST)
 	public JSONObject createKey(@RequestBody HashMap<String, String> data) {
 		result.clear();
@@ -34,7 +44,12 @@ public class APIKeyController {
 
 		return result;
 	}
-
+	
+	/**
+	 * Get APIKEY using id, pw.
+	 * @param data id, pw
+	 * @return apikey with success or fail flag 
+	 */
 	@RequestMapping(method = RequestMethod.PATCH)
 	public JSONObject getKey(@RequestBody HashMap<String, String> data) {
 		result.clear();

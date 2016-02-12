@@ -4,6 +4,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+/**
+ * SecurityConfiguration.java - a class that configure secure setting.
+ * @author kimbongchan
+ *
+ */
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 

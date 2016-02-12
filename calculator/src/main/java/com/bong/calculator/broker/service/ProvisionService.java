@@ -16,12 +16,22 @@ import org.springframework.stereotype.Service;
 
 import com.bong.calculator.model.UserManager;
 
+/**
+ * ProvisionService.java - a class that response for create-service.
+ * Cloud Foundry Create-service using this class(/v2/service_instance/:id).
+ * @author kimbongchan
+ *
+ */
 @Service
 public class ProvisionService implements ServiceInstanceService {
 
 	@Autowired
 	private UserManager userManager;
 
+	/**
+	 * This method is called when Cloud Foundry try to create service.
+	 * Create account serviceID to use Calculator SaaS.
+	 */
 	@Override
 	public CreateServiceInstanceResponse createServiceInstance(CreateServiceInstanceRequest request) {
 		String id = request.getServiceInstanceId();
@@ -35,6 +45,10 @@ public class ProvisionService implements ServiceInstanceService {
 		return new CreateServiceInstanceResponse();
 	}
 
+	/**
+	 * This method is called when Cloud Foundry try to remove service.
+	 * Delete account from Calculator SaaS.
+	 */
 	@Override
 	public DeleteServiceInstanceResponse deleteServiceInstance(DeleteServiceInstanceRequest request) {
 		userManager.deleteUser(request.getServiceInstanceId());

@@ -1,10 +1,19 @@
 package com.bong.calculator.model;
 
+/**
+ * Calculator.java - class that calculate operation.
+ * @author kimbongchan
+ */
 public class Calculator {
 
 	public Calculator() {
 	}
-
+	
+	/**
+	 * Calculate a operation.
+	 * @param operation
+	 * @return result of operation
+	 */
 	public double calculate(String operation) {
 
 		String[] numbers = operation.split("\\D+");

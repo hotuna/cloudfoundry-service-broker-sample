@@ -12,12 +12,22 @@ import org.springframework.stereotype.Service;
 
 import com.bong.calculator.model.UserManager;
 
+/**
+ * BindService.java - a class that response for bind-service.
+ * Cloud Foundry Create-binding using this class.
+ * @author kimbongchan
+ *
+ */
 @Service
 public class BindService implements ServiceInstanceBindingService {
 
 	@Autowired
 	private UserManager userManager;
-
+	
+	/**
+	 * This method is called when Cloud Foundry try to bind service to app.
+	 * Create APIKEY with bindID, serviceID to use Calculator SaaS.
+	 */
 	@Override
 	public CreateServiceInstanceBindingResponse createServiceInstanceBinding(
 			CreateServiceInstanceBindingRequest request) {
@@ -28,7 +38,11 @@ public class BindService implements ServiceInstanceBindingService {
 
 		return new CreateServiceInstanceBindingResponse(credentials);
 	}
-
+	
+	/**
+	 * This method is called when Cloud Foundry try to remove binding from app.
+	 * Delete account from Calculator SaaS.
+	 */
 	@Override
 	public void deleteServiceInstanceBinding(DeleteServiceInstanceBindingRequest request) {
 		userManager.deleteUser(request.getServiceInstanceId());
