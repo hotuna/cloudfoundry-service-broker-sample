@@ -2,8 +2,14 @@ button {
 	width: 100px;
 	height: 100px;
 	font-size: 20px;
-	margine: 0px;
 	padding: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	float: left;
+}
+
+div {
+	width: 400px;	
 }
 
 input {
@@ -14,6 +20,6 @@ input {
 	text-align: right;
 }
 
-.bicButton {
+.bigButton {
 	width: 200px;
 }
