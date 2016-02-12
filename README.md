@@ -21,6 +21,7 @@ cloudfoundry-service-broker-sample is composed of two projects.
 
 ## How to run
 Under usage guide assumes that you are using to deploy the application to cloudfoundry.
+Futher information: http://docs.cloudfoundry.org/services/api.html
 
 1. Build projects and deploy.
 
@@ -30,6 +31,7 @@ Under usage guide assumes that you are using to deploy the application to cloudf
 2. Create service-broker
 ID, PW is for http basic authentication, but calculator project is not use it.
 Use dummy data for ID, PW parametsers. 
+ref: `com.bong.calculator.broker.config.CatalogConfig.java'
 
 	- cf create-service-broker BROKER_NAME ID PW URL
 	- URL: URL of calculator project.
@@ -41,10 +43,12 @@ Related information is available at cf service-access.
 	- cf enable-service-access SERVICE_NAME -p PLAN -o ORG
 
 4. Create service-instance
+ref: `com.bong.calculator.broker.service.ProvisionService.java'
 
 	- cf create-service SERVICE_NAME PLAN SERVICE_INSTANCE_NAME
 
 5. Bind service
 Bind servcie-instance to consumer project.
+ref: `com.bong.calculator.broker.service.BindService.java'
 
 	- cf bind-service APP_NAME SERVCE_INSTANCE_NAME
