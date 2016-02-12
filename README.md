@@ -21,7 +21,7 @@ cloudfoundry-service-broker-sample is composed of two projects.
 
 ## How to run
 Under usage guide assumes that you are using to deploy the application to cloudfoundry.
-Futher information: http://docs.cloudfoundry.org/services/api.html
+Further information: http://docs.cloudfoundry.org/services/api.html
 
 1. Build projects and deploy.
 
