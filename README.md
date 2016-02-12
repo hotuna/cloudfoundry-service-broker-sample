@@ -19,26 +19,28 @@ This guide is
 Under usage guide assumes that you are using to deploy the application to cloudfoundry.
 
 1. Build projects and deploy.
-- mvn install
-- cf push
+
+	- mvn install
+	- cf push
 
 2. Create service-broker
 ID, PW is for http basic authentication, but calculator project is not use it.
 Use dummy data for ID, PW parametsers. 
 
-- cf create-service-broker BROKER_NAME ID PW URL
-
-`URL`: URL of calculator project.
+	- cf create-service-broker BROKER_NAME ID PW URL
+	- URL: URL of calculator project.
 
 3. Set access
 Set to allow access to the servcie-broker from particular org.
 Related information is available at cf service-access.
 
-- cf enable-service-access SERVICE_NAME -p PLAN -o ORG
+	- cf enable-service-access SERVICE_NAME -p PLAN -o ORG
 
 4. Create service-instance
-- cf create-service SERVICE_NAME PLAN SERVICE_INSTANCE_NAME
+
+	- cf create-service SERVICE_NAME PLAN SERVICE_INSTANCE_NAME
 
 5. Bind service
 Bind servcie-instance to consumer project.
-- cf bind-service APP_NAME SERVCE_INSTANCE_NAME
+
+	- cf bind-service APP_NAME SERVCE_INSTANCE_NAME
