@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+included=src/main/resources/templates/*.js\:src/main/webapp/*.js
