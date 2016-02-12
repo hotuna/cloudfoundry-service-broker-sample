@@ -7,7 +7,7 @@ But this project fully implements SaaS service, servcie-broker, consumer.
 
 By running this project you can understand service-broker's mechanism easily.
 
-## Concept
+## structure
 cloudfoundry-service-broker-sample is composed of two projects.
 
 - calculator
