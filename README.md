@@ -11,13 +11,11 @@ By running this project you can understand service-broker's mechanism easily.
 cloudfoundry-service-broker-sample is composed of two projects.
 
 - calculator
-
-The application that receives the operation and return operation result. It is service of the SaaS type
-`com.bong.calculator.broker` the contents of the sub- source implementation of the broker.
+	The application that receives the operation and return operation result. It is service of the SaaS type
+	`com.bong.calculator.broker` the contents of the sub- source implementation of the broker.
 
 - consumer
-
-The application is calculator using the calculator api.
+	The application is calculator using the calculator api.
 
 ## How to run
 Under usage guide assumes that you are using to deploy the application to cloudfoundry.
