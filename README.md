@@ -28,7 +28,7 @@ Use dummy data for ID, PW parametsers.
 
 - cf create-service-broker BROKER_NAME ID PW URL
 
-* URL: URL of calculator project.
+`URL`: URL of calculator project.
 
 3. Set access
 Set to allow access to the servcie-broker from particular org.
